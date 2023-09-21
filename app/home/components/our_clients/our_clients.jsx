@@ -104,7 +104,6 @@ function Our_clients() {
                 height={100}
                 sizes="{max-width: 100px} 40vw, 100px"
                 style={{ objectFit: "contain" }}
-                priority
               />
             </div>
           </motion.div>

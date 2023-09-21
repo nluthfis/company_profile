@@ -15,6 +15,9 @@ function Navbar() {
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
     updateWidth();
+
+    const currentPath = window.location.pathname;
+    setActiveLink(currentPath);
   }, []);
 
   return (
@@ -37,7 +40,7 @@ function Navbar() {
               width={width < 1024 ? "180" : "300"}
               height={width < 1024 ? "30" : "60"}
               // layout="responsive"
-              priority
+
               alt="logo"
             />
           </Link>
@@ -65,7 +68,6 @@ function Navbar() {
                   height={80}
                   alt="logo"
                   style={{ objectFit: "contain", objectPosition: "left top" }}
-                  priority
                 />
               </div>
               <button
