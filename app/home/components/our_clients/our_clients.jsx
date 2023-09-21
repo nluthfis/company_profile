@@ -62,7 +62,9 @@ function Our_clients() {
     <div className="container">
       <div className="row ">
         <div className="col" style={{ marginLeft: "10%", marginRight: "10%" }}>
-          <p className="text-white">A DIGITAL PRODUCT AGENCY LIKE NO OTHER</p>
+          <p className="fw-bold" style={{ color: "rgba(169,80,210,255)" }}>
+            A DIGITAL PRODUCT AGENCY LIKE NO OTHER
+          </p>
           <h1 className="title text-white mb-3 fw-bold ">
             Skip the long meetings and email <br /> threads. We focus on getting
             things done.

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -75,14 +76,14 @@ function Service() {
               </div>
             </motion.div>
             <motion.div
-              className="col-lg-6 order-lg-2"
+              className="col-lg-6 order-lg-2 "
               variants={ffBottom}
               initial="initial"
               whileInView="animate"
               animate="once"
               viewport={{ once: true }}
             >
-              <div className="service ">
+              <div className="service d-flex justify-content-center">
                 <img
                   className="img-fluid"
                   src={item.img}

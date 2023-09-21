@@ -27,6 +27,22 @@ function Tech() {
         </p>
         <Marquee />
       </div>
+      <div
+        className="row mt-5 gx-1"
+        style={{ marginTop: "20%", marginBottom: "20%" }}
+      >
+        <div className="col -lg-12 d-flex flex-column border border-3 p-5">
+          <h1 className="text-white text-center fw-bold">
+            {`Can't Find What you're Looking For?`}
+          </h1>
+          <p className="text-white text-center">
+            Our team will be happy to help you
+          </p>
+          <button className="btn btn-secondary d-block mx-auto mt-5">
+            Contact Us
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

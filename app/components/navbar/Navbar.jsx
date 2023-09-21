@@ -20,13 +20,22 @@ function Navbar() {
   return (
     <div className="">
       <nav className="navbar navbar-expand-lg fixed-top">
-        <div className="container ">
+        <div
+          className="container p-2"
+          // style={{
+          //   background: "rgba(0, 0, 0, 0.46)",
+          //   borderRadius: "16px",
+          //   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+          //   backdropFilter: "blur(13.7px)",
+          //   WebkitBackdropFilter: "blur(13.7px)",
+          // }}
+        >
           <Link className="" href="/">
             <Image
-              className=""
+              className="mt-1"
               src="/logo.png"
-              width={width < 1024 ? "150" : "300"}
-              height={width < 1024 ? "25" : "50"}
+              width={width < 1024 ? "180" : "300"}
+              height={width < 1024 ? "30" : "60"}
               // layout="responsive"
               priority
               alt="logo"
@@ -49,11 +58,11 @@ function Navbar() {
           >
             <div className="offcanvas-header border-bottom text-white">
               <div className="offcanvas-title" id="offcanvasNavbarLabel">
-                <Image
-                  className="logo-logo m-1"
+                <img
+                  className="logo-logo img-fluid m-1"
                   src="/logo.png"
                   width={200}
-                  height={40}
+                  height={80}
                   alt="logo"
                   style={{ objectFit: "contain", objectPosition: "left top" }}
                   priority

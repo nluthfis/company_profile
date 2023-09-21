@@ -1,5 +1,33 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+const fadeInRight = {
+  initial: {
+    opacity: 0,
+    x: 150,
+  },
+  animate: () => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+    },
+  }),
+};
+
+const fadeInLeft = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: () => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+    },
+  }),
+};
 
 function Our_works() {
   const portfolio = [
@@ -55,11 +83,28 @@ function Our_works() {
         className="row d-flex justify-content-center align-items-center "
         style={{ marginLeft: "10%", marginRight: "10%" }}
       >
-        <h1 className="text-white text-center fw-bold mt-5 mb-5">Our Works</h1>
+        <h1
+          className="text-center fw-bold mt-5 mb-5"
+          style={{
+            background:
+              "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          Our Works
+        </h1>
 
         {portfolio.map((item, index) => (
           <div className="row" key={index}>
-            <div className="col-lg-6 order-lg-2 d-flex justify-content-center align-items-center mt-5 mb-5">
+            <motion.div
+              className="col-lg-6 order-lg-2 d-flex justify-content-center align-items-center mt-5 mb-5"
+              variants={fadeInRight}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+            >
               <div>
                 <Image
                   className="img-fluid"
@@ -74,8 +119,14 @@ function Our_works() {
                   alt="logo"
                 />
               </div>
-            </div>
-            <div className="col-lg-6 order-lg-1">
+            </motion.div>
+            <motion.div
+              className="col-lg-6 order-lg-1"
+              variants={fadeInLeft}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+            >
               <h1 className="title fw-bold text-white">{item.name}</h1>
               <h6 className="subtitle text-white">{item.subject}</h6>
               <p className="text-white ">{item.desc}</p>
@@ -86,10 +137,12 @@ function Our_works() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
         ))}
-        <button className="btn btn-secondary mt-3 mb-3">Show More</button>
+        <button className="btn bg-transparent border shadow-0 mt-3 mb-3">
+          <span className="text-white">Show More</span>
+        </button>
       </div>
     </div>
   );

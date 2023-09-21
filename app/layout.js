@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,13 +24,16 @@ export default function RootLayout({ children }) {
       <body
         className={inter.className}
         style={{
-          backgroundColor: "rgba(32,28,28)",
+          backgroundColor: "rgba(27, 27, 29)",
         }}
       >
         <header>
           <Navbar />
         </header>
         <div> {children}</div>
+        <footer>
+          <Footer />
+        </footer>
 
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></Script>
       </body>
